@@ -1,0 +1,832 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ICCSPayDB_developModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ICCSPayDB_developEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="AFCStationCode" EntityType="ICCSPayDB_developModel.AFCStationCode" />
+    <EntitySet Name="AFCStationCode_bak" EntityType="ICCSPayDB_developModel.AFCStationCode_bak" />
+    <EntitySet Name="AFCTransferStation" EntityType="ICCSPayDB_developModel.AFCTransferStation" />
+    <EntitySet Name="AFCTransferStation_bak" EntityType="ICCSPayDB_developModel.AFCTransferStation_bak" />
+    <EntitySet Name="ApplePayDeal" EntityType="ICCSPayDB_developModel.ApplePayDeal" />
+    <EntitySet Name="BOMOrder" EntityType="ICCSPayDB_developModel.BOMOrder" />
+    <EntitySet Name="BOMOrder_his" EntityType="ICCSPayDB_developModel.BOMOrder_his" />
+    <EntitySet Name="DeviceSupplier" EntityType="ICCSPayDB_developModel.DeviceSupplier" />
+    <EntitySet Name="ICCSPayAPILogALI" EntityType="ICCSPayDB_developModel.ICCSPayAPILogALI" />
+    <EntitySet Name="ICCSPayAPILogALI_Return" EntityType="ICCSPayDB_developModel.ICCSPayAPILogALI_Return" />
+    <EntitySet Name="ICCSPayAPILogWX" EntityType="ICCSPayDB_developModel.ICCSPayAPILogWX" />
+    <EntitySet Name="ICCSPayAPILogWX_Return" EntityType="ICCSPayDB_developModel.ICCSPayAPILogWX_Return" />
+    <EntitySet Name="ICloundOrderNotify" EntityType="ICCSPayDB_developModel.ICloundOrderNotify" />
+    <EntitySet Name="InvalidDeviceId" EntityType="ICCSPayDB_developModel.InvalidDeviceId" />
+    <EntitySet Name="InvalidRandomFact" EntityType="ICCSPayDB_developModel.InvalidRandomFact" />
+    <EntitySet Name="QRCStationOrder" EntityType="ICCSPayDB_developModel.QRCStationOrder" />
+    <EntitySet Name="QRCStationOrder_his" EntityType="ICCSPayDB_developModel.QRCStationOrder_his" />
+    <EntitySet Name="StationOrder" EntityType="ICCSPayDB_developModel.StationOrder" />
+    <EntitySet Name="StationOrder_his" EntityType="ICCSPayDB_developModel.StationOrder_his" />
+    <EntitySet Name="StationOrder_normal" EntityType="ICCSPayDB_developModel.StationOrder_normal" />
+    <EntitySet Name="StationOrder_strange" EntityType="ICCSPayDB_developModel.StationOrder_strange" />
+    <EntitySet Name="TicketPrice" EntityType="ICCSPayDB_developModel.TicketPrice" />
+    <EntitySet Name="TicketPrice_bak" EntityType="ICCSPayDB_developModel.TicketPrice_bak" />
+    <EntitySet Name="VoucherList" EntityType="ICCSPayDB_developModel.VoucherList" />
+    <EntitySet Name="WebOrder" EntityType="ICCSPayDB_developModel.WebOrder" />
+    <EntitySet Name="WebOrder_his" EntityType="ICCSPayDB_developModel.WebOrder_his" />
+    <EntitySet Name="WebOrderRefund" EntityType="ICCSPayDB_developModel.WebOrderRefund" />
+    <EntitySet Name="WebOrderRefund_his" EntityType="ICCSPayDB_developModel.WebOrderRefund_his" />
+    <EntitySet Name="WebOrderVoucher" EntityType="ICCSPayDB_developModel.WebOrderVoucher" />
+    <EntitySet Name="WTOrder" EntityType="ICCSPayDB_developModel.WTOrder" />
+  </EntityContainer>
+  <EntityType Name="AFCStationCode">
+    <Key>
+      <PropertyRef Name="AFCStationCodeId" />
+      <PropertyRef Name="LineId" />
+      <PropertyRef Name="StationId" />
+      <PropertyRef Name="StationChineseName" />
+      <PropertyRef Name="StationEnglishName" />
+      <PropertyRef Name="VersionNo" />
+      <PropertyRef Name="RecordFlag" />
+    </Key>
+    <Property Name="AFCStationCodeId" Type="Guid" Nullable="false" />
+    <Property Name="LineId" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="StationId" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="StationChineseName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="StationEnglishName" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="VersionNo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="RecordFlag" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="LineChineseName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LineEnglishName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="AFCStationCode_bak">
+    <Key>
+      <PropertyRef Name="AFCStationCodeId" />
+      <PropertyRef Name="LineId" />
+      <PropertyRef Name="StationId" />
+      <PropertyRef Name="StationChineseName" />
+      <PropertyRef Name="StationEnglishName" />
+      <PropertyRef Name="VersionNo" />
+      <PropertyRef Name="RecordFlag" />
+    </Key>
+    <Property Name="AFCStationCodeId" Type="Guid" Nullable="false" />
+    <Property Name="LineId" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="StationId" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="StationChineseName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="StationEnglishName" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="VersionNo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="RecordFlag" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="LineChineseName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LineEnglishName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="AFCTransferStation">
+    <Key>
+      <PropertyRef Name="identityKey" />
+    </Key>
+    <Property Name="identityKey" Type="Guid" Nullable="false" />
+    <Property Name="StationCode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="TakeStationCode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="StationChineseName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="AFCTransferStation_bak">
+    <Key>
+      <PropertyRef Name="identityKey" />
+    </Key>
+    <Property Name="identityKey" Type="Guid" Nullable="false" />
+    <Property Name="StationCode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="TakeStationCode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="StationChineseName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ApplePayDeal">
+    <Key>
+      <PropertyRef Name="ApplePayDealId" />
+    </Key>
+    <Property Name="ApplePayDealId" Type="Guid" Nullable="false" />
+    <Property Name="ReqSysDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationCode" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="CityCode" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ChannelType" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="ConversationId" Type="String" Nullable="false" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="PAN" Type="String" Nullable="false" MaxLength="19" Unicode="false" FixedLength="false" />
+    <Property Name="TransactionAmount" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="TransactionCurrencyCode" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="TransactionTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AuthorizationResponseIdentificationCode" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="RetrievalReferNumber" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="TerminalNo" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="MerchantCodeId" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="ApplicationCryptogram" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="InputmodeCode" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="CardserialNumber" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="TerminalreadAbility" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="CardconditionCode" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="TerminalPerformance" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="TerminalverificationResults" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="UnpredictableNumber" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="InterfaceequipmentserialNumber" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="IssuerapplicationData" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="ApplicationtradeCounter" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="ApplicationinterchangeProfile" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="TransactionDate" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="TerminalcountryCode" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="ResponseCode" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="TransactionType" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="AuthorizeAmount" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="TradingcurrencyCode" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="CiphercheckResult" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="CardvalidPeriod" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="CryptograminformationData" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="otherAmount" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="CardholderverificationMethod" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="TerminalType" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="ProfessfileName" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="ApplicationVersion" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="TradingsequenceCounter" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="EcissueauthorizationCode" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="ProductidentificationInformation" Type="String" Nullable="false" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="CardType" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentCode" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="BOMOrder">
+    <Key>
+      <PropertyRef Name="BOMOrderId" />
+    </Key>
+    <Property Name="BOMOrderId" Type="Guid" Nullable="false" />
+    <Property Name="OrderNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentCode" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TicketType" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TicketId" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CityCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ChannelType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PassengerAffairType" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PickupStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PickupStationTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GetOffStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="GetOffStationTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TransactionId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTimeRaw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTime" Type="DateTime" Precision="3" />
+    <Property Name="PassengerAffairPrice" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserAccount" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UserOpenId" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PayErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Step" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StepStatus" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="TicketTakeNum" Type="Int32" />
+    <Property Name="TicketTakeTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceErrMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceErrSlipSeq" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="QRCode" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="BOMOrder_his">
+    <Key>
+      <PropertyRef Name="BOMOrderId" />
+      <PropertyRef Name="OrderNo" />
+      <PropertyRef Name="TicketType" />
+      <PropertyRef Name="TicketId" />
+      <PropertyRef Name="BuyTime" />
+      <PropertyRef Name="DeviceId" />
+      <PropertyRef Name="PassengerAffairType" />
+      <PropertyRef Name="PickupStationCode" />
+      <PropertyRef Name="PickupStationTime" />
+      <PropertyRef Name="GetOffStationCode" />
+      <PropertyRef Name="GetOffStationTime" />
+      <PropertyRef Name="PassengerAffairPrice" />
+      <PropertyRef Name="OrderStatus" />
+      <PropertyRef Name="Step" />
+      <PropertyRef Name="IsValid" />
+    </Key>
+    <Property Name="BOMOrderId" Type="Guid" Nullable="false" />
+    <Property Name="OrderNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentCode" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TicketType" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TicketId" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CityCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ChannelType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PassengerAffairType" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PickupStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PickupStationTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GetOffStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="GetOffStationTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TransactionId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTimeRaw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTime" Type="DateTime" Precision="3" />
+    <Property Name="PassengerAffairPrice" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserAccount" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UserOpenId" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PayErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Step" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StepStatus" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="TicketTakeNum" Type="Int32" />
+    <Property Name="TicketTakeTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceErrMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceErrSlipSeq" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="DeviceSupplier">
+    <Key>
+      <PropertyRef Name="DeviceId" />
+      <PropertyRef Name="Supplier" />
+    </Key>
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Supplier" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ICCSPayAPILogALI">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ICCSPayAPILogALI_Return">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ICCSPayAPILogWX">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ICCSPayAPILogWX_Return">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ICloundOrderNotify">
+    <Key>
+      <PropertyRef Name="ICloundOrderNotifyId" />
+    </Key>
+    <Property Name="ICloundOrderNotifyId" Type="Guid" Nullable="false" />
+    <Property Name="OrderNo" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="NotifyITPay" Type="Int32" />
+    <Property Name="NotifyITPayTime" Type="DateTime" Precision="3" />
+    <Property Name="NotifyMemberPay" Type="Int32" />
+    <Property Name="NotifyMemberPayTime" Type="DateTime" Precision="3" />
+    <Property Name="NotifyITTicketOut" Type="Int32" />
+    <Property Name="NotifyITTicketOutTime" Type="DateTime" Precision="3" />
+    <Property Name="NotifyMemberTicketOut" Type="Int32" />
+    <Property Name="NotifyMemberTicketOutTime" Type="DateTime" Precision="3" />
+    <Property Name="NotifyITRefund" Type="Int32" />
+    <Property Name="NotifyITRefundTime" Type="DateTime" Precision="3" />
+    <Property Name="NotifyMemberRefund" Type="Int32" />
+    <Property Name="NotifyMemberRefundTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="InvalidDeviceId">
+    <Key>
+      <PropertyRef Name="DeviceIdID" />
+    </Key>
+    <Property Name="DeviceIdID" Type="Guid" Nullable="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Flag" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvalidRandomFact">
+    <Key>
+      <PropertyRef Name="RandomFactId" />
+    </Key>
+    <Property Name="RandomFactId" Type="Guid" Nullable="false" />
+    <Property Name="RandomFact" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="QRCStationOrder">
+    <Key>
+      <PropertyRef Name="QRCStationOrderId" />
+    </Key>
+    <Property Name="QRCStationOrderId" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CityCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ChannelType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentCode" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="OriAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DesAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TicketPrice" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="TicketNum" Type="Int32" Nullable="false" />
+    <Property Name="SingleTicketType" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Discount" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="TransactionId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTimeRaw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTime" Type="DateTime" Precision="3" />
+    <Property Name="ActualFee" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserAccount" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UserOpenId" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PayErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Step" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StepStatus" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="TicketTakeNum" Type="Int32" />
+    <Property Name="TicketTakeTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceErrMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceErrSlipSeq" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="QRCode" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="QRCStationOrder_his">
+    <Key>
+      <PropertyRef Name="QRCStationOrderId" />
+      <PropertyRef Name="TradeNo" />
+      <PropertyRef Name="BuyTime" />
+      <PropertyRef Name="DeviceId" />
+      <PropertyRef Name="PaymentCode" />
+      <PropertyRef Name="OriAFCStationCode" />
+      <PropertyRef Name="DesAFCStationCode" />
+      <PropertyRef Name="TicketPrice" />
+      <PropertyRef Name="TicketNum" />
+      <PropertyRef Name="Discount" />
+      <PropertyRef Name="Amount" />
+      <PropertyRef Name="OrderStatus" />
+      <PropertyRef Name="Step" />
+      <PropertyRef Name="IsValid" />
+    </Key>
+    <Property Name="QRCStationOrderId" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CityCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ChannelType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentCode" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="OriAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DesAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TicketPrice" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="TicketNum" Type="Int32" Nullable="false" />
+    <Property Name="SingleTicketType" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Discount" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="TransactionId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTimeRaw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTime" Type="DateTime" Precision="3" />
+    <Property Name="ActualFee" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserAccount" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UserOpenId" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PayErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Step" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StepStatus" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="TicketTakeNum" Type="Int32" />
+    <Property Name="TicketTakeTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceErrMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceErrSlipSeq" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="QRCode" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="StationOrder">
+    <Key>
+      <PropertyRef Name="StationOrderId" />
+    </Key>
+    <Property Name="StationOrderId" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CityCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ChannelType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentCode" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="OriAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DesAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TicketPrice" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="TicketNum" Type="Int32" Nullable="false" />
+    <Property Name="SingleTicketType" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Discount" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="TransactionId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTimeRaw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTime" Type="DateTime" Precision="3" />
+    <Property Name="ActualFee" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserAccount" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UserOpenId" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PayErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Step" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StepStatus" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="TicketTakeNum" Type="Int32" />
+    <Property Name="TicketTakeTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceErrMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceErrSlipSeq" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="StationOrder_his">
+    <Key>
+      <PropertyRef Name="StationOrderId" />
+      <PropertyRef Name="TradeNo" />
+      <PropertyRef Name="BuyTime" />
+      <PropertyRef Name="DeviceId" />
+      <PropertyRef Name="PaymentCode" />
+      <PropertyRef Name="OriAFCStationCode" />
+      <PropertyRef Name="DesAFCStationCode" />
+      <PropertyRef Name="TicketPrice" />
+      <PropertyRef Name="TicketNum" />
+      <PropertyRef Name="Discount" />
+      <PropertyRef Name="Amount" />
+      <PropertyRef Name="OrderStatus" />
+      <PropertyRef Name="Step" />
+      <PropertyRef Name="IsValid" />
+    </Key>
+    <Property Name="StationOrderId" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CityCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ChannelType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentCode" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="OriAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DesAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TicketPrice" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="TicketNum" Type="Int32" Nullable="false" />
+    <Property Name="SingleTicketType" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Discount" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="TransactionId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTimeRaw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTime" Type="DateTime" Precision="3" />
+    <Property Name="ActualFee" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserAccount" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UserOpenId" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PayErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Step" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StepStatus" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="TicketTakeNum" Type="Int32" />
+    <Property Name="TicketTakeTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceErrMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceErrSlipSeq" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="StationOrder_normal">
+    <Key>
+      <PropertyRef Name="StationOrderId" />
+    </Key>
+    <Property Name="StationOrderId" Type="Guid" Nullable="false" />
+    <Property Name="OriTradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CityCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ChannelType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentCode" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="OriAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DesAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TicketPrice" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="TicketNum" Type="Int32" Nullable="false" />
+    <Property Name="SingleTicketType" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Discount" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="TransactionId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTimeRaw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTime" Type="DateTime" Precision="3" />
+    <Property Name="ActualFee" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserAccount" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UserOpenId" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PayErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Step" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StepStatus" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="TicketTakeNum" Type="Int32" />
+    <Property Name="TicketTakeTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceErrMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceErrSlipSeq" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="StationOrder_strange">
+    <Key>
+      <PropertyRef Name="StationOrderId" />
+    </Key>
+    <Property Name="StationOrderId" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CityCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ChannelType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentCode" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="OriAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DesAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TicketPrice" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="TicketNum" Type="Int32" Nullable="false" />
+    <Property Name="SingleTicketType" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Discount" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="TransactionId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTimeRaw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTime" Type="DateTime" Precision="3" />
+    <Property Name="ActualFee" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserAccount" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UserOpenId" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PayErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Step" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StepStatus" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="TicketTakeNum" Type="Int32" />
+    <Property Name="TicketTakeTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceErrMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceErrSlipSeq" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TicketPrice">
+    <Key>
+      <PropertyRef Name="TicketPriceId" />
+    </Key>
+    <Property Name="TicketPriceId" Type="Guid" Nullable="false" />
+    <Property Name="BeginLineId" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="EndLineId" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="BeginLineChineseName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EndLineChineseName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BeginLineEnglishName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EndLineEnglishName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BeginStationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="EndStationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="BeginStationChineseName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="EndStationChineseName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="BeginStationEnglishName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="EndStationEnglishName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="FareCent" Type="Int32" />
+    <Property Name="VersionNo" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="RecordFlag" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="TicketPrice_bak">
+    <Key>
+      <PropertyRef Name="TicketPriceId" />
+    </Key>
+    <Property Name="TicketPriceId" Type="Guid" Nullable="false" />
+    <Property Name="BeginLineId" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="EndLineId" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="BeginLineChineseName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EndLineChineseName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BeginLineEnglishName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EndLineEnglishName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BeginStationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="EndStationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="BeginStationChineseName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="EndStationChineseName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="BeginStationEnglishName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="EndStationEnglishName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="FareCent" Type="Int32" />
+    <Property Name="VersionNo" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="RecordFlag" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="VoucherList">
+    <Key>
+      <PropertyRef Name="VoucherId" />
+    </Key>
+    <Property Name="VoucherId" Type="Guid" Nullable="false" />
+    <Property Name="VoucherCode" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="EffectiveTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExpiredTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GenerateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="IsUsed" Type="Boolean" Nullable="false" />
+    <Property Name="IsLocked" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WebOrder">
+    <Key>
+      <PropertyRef Name="WebOrderId" />
+    </Key>
+    <Property Name="WebOrderId" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ExternalTradeNo" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PrepayId" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="OperationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CityCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ChannelType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="OriAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DesAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TicketPrice" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="TicketNum" Type="Int32" Nullable="false" />
+    <Property Name="Discount" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="TicketTarget" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TransactionId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTimeRaw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTime" Type="DateTime" Precision="3" />
+    <Property Name="ActualFee" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserAccount" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UserOpenId" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PayErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Step" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StepStatus" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="TicketTakeNum" Type="Int32" />
+    <Property Name="TicketTakeTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceErrMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceErrSlipSeq" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ExitDeviceId" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ExitTime" Type="DateTime" Precision="3" />
+    <Property Name="RandomFact" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="MemberId" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="WebOrder_his">
+    <Key>
+      <PropertyRef Name="WebOrderId" />
+      <PropertyRef Name="TradeNo" />
+      <PropertyRef Name="ExternalTradeNo" />
+      <PropertyRef Name="BuyTime" />
+      <PropertyRef Name="PrepayId" />
+      <PropertyRef Name="DeviceId" />
+      <PropertyRef Name="OriAFCStationCode" />
+      <PropertyRef Name="DesAFCStationCode" />
+      <PropertyRef Name="TicketPrice" />
+      <PropertyRef Name="TicketNum" />
+      <PropertyRef Name="Discount" />
+      <PropertyRef Name="Amount" />
+      <PropertyRef Name="OrderStatus" />
+      <PropertyRef Name="Step" />
+      <PropertyRef Name="IsValid" />
+    </Key>
+    <Property Name="WebOrderId" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ExternalTradeNo" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PrepayId" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="OperationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CityCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ChannelType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="OriAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DesAFCStationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TicketPrice" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="TicketNum" Type="Int32" Nullable="false" />
+    <Property Name="Discount" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="TicketTarget" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TransactionId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTimeRaw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTime" Type="DateTime" Precision="3" />
+    <Property Name="ActualFee" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserAccount" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UserOpenId" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PayErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Step" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StepStatus" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="TicketTakeNum" Type="Int32" />
+    <Property Name="TicketTakeTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceErrMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceErrSlipSeq" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ExitDeviceId" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ExitTime" Type="DateTime" Precision="3" />
+    <Property Name="RandomFact" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="MemberId" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="WebOrderRefund">
+    <Key>
+      <PropertyRef Name="WebOrderRefundId" />
+    </Key>
+    <Property Name="WebOrderRefundId" Type="Guid" Nullable="false" />
+    <Property Name="WebOrderId" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ExternalTradeNo" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="RefundTradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="RefundReason" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="RefundFee" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="TotalFee" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RequestTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsRequestSuccess" Type="Boolean" Nullable="false" />
+    <Property Name="RequestErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="IsRespondSuccess" Type="Boolean" Nullable="false" />
+    <Property Name="RespondTime" Type="DateTime" Precision="3" />
+    <Property Name="RespondErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="WebOrderRefund_his">
+    <Key>
+      <PropertyRef Name="WebOrderRefundId" />
+    </Key>
+    <Property Name="WebOrderRefundId" Type="Guid" Nullable="false" />
+    <Property Name="WebOrderId" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ExternalTradeNo" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="RefundTradeNo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="RefundReason" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="RefundFee" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="TotalFee" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RequestTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsRequestSuccess" Type="Boolean" Nullable="false" />
+    <Property Name="RequestErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="IsRespondSuccess" Type="Boolean" Nullable="false" />
+    <Property Name="RespondTime" Type="DateTime" Precision="3" />
+    <Property Name="RespondErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="WebOrderVoucher">
+    <Key>
+      <PropertyRef Name="WebOrderVoucherId" />
+    </Key>
+    <Property Name="WebOrderVoucherId" Type="Guid" Nullable="false" />
+    <Property Name="WebOrderId" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="VoucherId" Type="Guid" Nullable="false" />
+    <Property Name="VoucherCode" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="OrderVoucherCode" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="OrderVoucherCodeEncrypted" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="IsUsed" Type="Boolean" Nullable="false" />
+    <Property Name="UsedTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="WTOrder">
+    <Key>
+      <PropertyRef Name="WTOrderId" />
+    </Key>
+    <Property Name="WTOrderId" Type="Guid" Nullable="false" />
+    <Property Name="TradeNo" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ExternalTradeNo" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PrepayId" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="OperationCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CityCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ChannelType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentVendor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StationCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ProductCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="Num" Type="Int32" Nullable="false" />
+    <Property Name="Discount" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="TransactionId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTimeRaw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayEndTime" Type="DateTime" Precision="3" />
+    <Property Name="ActualFee" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="BankType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserAccount" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UserOpenId" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PayErrCodeDes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Step" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StepStatus" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="TicketTakeNum" Type="Int32" />
+    <Property Name="TicketTakeTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrTime" Type="DateTime" Precision="3" />
+    <Property Name="DeviceErrCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceErrMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceErrSlipSeq" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ExitDeviceId" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ExitTime" Type="DateTime" Precision="3" />
+    <Property Name="MemberId" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,69 @@
+E:\办公电脑\D\Project\C# Practice\ICCSPayTool\ICCSPayTool\bin\Debug\ICCSPayTool.exe.config
+E:\办公电脑\D\Project\C# Practice\ICCSPayTool\ICCSPayTool\bin\Debug\ICCSPayTool.exe
+E:\办公电脑\D\Project\C# Practice\ICCSPayTool\ICCSPayTool\bin\Debug\ICCSPayTool.pdb
+E:\办公电脑\D\Project\C# Practice\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.Form1.resources
+E:\办公电脑\D\Project\C# Practice\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.Properties.Resources.resources
+E:\办公电脑\D\Project\C# Practice\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.csproj.GenerateResource.Cache
+E:\办公电脑\D\Project\C# Practice\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.exe
+E:\办公电脑\D\Project\C# Practice\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.pdb
+E:\办公电脑\D\Project\C# Practice\ICCSPayTool\ICCSPayTool\bin\Debug\EntityFramework.dll
+E:\办公电脑\D\Project\C# Practice\ICCSPayTool\ICCSPayTool\bin\Debug\EntityFramework.xml
+E:\办公电脑\D\Project\C# Practice\ICCSPayTool\ICCSPayTool\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\ICCSPayTool.exe.config
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\ICCSPayTool.exe
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\ICCSPayTool.pdb
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\AlipayInterfaceLib.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\AopSdk.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\CCBPayInterfaceLib.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\CCBRSA.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\EntityFramework.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\ICCSPayAPI.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\IKVM.OpenJDK.Core.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\IKVM.OpenJDK.Security.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\IKVM.Runtime.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\LitJson.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\log4net.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\PlatformLib.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\ResultNofity.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\ThoughtWorks.QRCode.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\UnionPayInterfaceLib.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\WeixinPayWeb.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\WxPayInterfaceLib.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\EntityFramework.xml
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.Form1.resources
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.Properties.Resources.resources
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.csproj.GenerateResource.Cache
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.exe
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.pdb
+C:\Users\gaoke\Desktop\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.csprojResolveAssemblyReference.cache
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\ICCSPayTool.exe.config
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.exe
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.pdb
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\ICCSPayTool.exe
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\ICCSPayTool.pdb
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\AlipayInterfaceLib.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\AopSdk.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\CCBPayInterfaceLib.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\CCBRSA.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\EntityFramework.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\ICCSPayAPI.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\IKVM.OpenJDK.Core.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\IKVM.OpenJDK.Security.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\IKVM.Runtime.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\LitJson.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\log4net.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\Newtonsoft.Json.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\PlatformLib.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\ResultNofity.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\ThoughtWorks.QRCode.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\UnionPayInterfaceLib.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\WeixinPayWeb.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\WxPayInterfaceLib.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\EntityFramework.xml
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.csprojResolveAssemblyReference.cache
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.Form1.resources
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.Properties.Resources.resources
+E:\办公电脑\D\2018年工作\支付后台\后台建设\二维码客服平台\ICCSPayTool\ICCSPayTool\obj\Debug\ICCSPayTool.csproj.GenerateResource.Cache
